@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandra Forero | Psicóloga Clínica,  Especialista en Educación Emocional</title>
+    <meta name="description" content="Psicóloga Clínica, Especialista en Educación Emocional. Un espacio donde la claridad y la calma se convierten en dirección.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-beige': '#f9f7f2',
+                        'brand-sand': '#e6e2dd',
+                        'brand-accent': '#d4a373', // Tono tierra suave
+                        'brand-text': '#4a4a4a',
+                        'brand-dark': '#2c2c2c',
+                        'brand-green': '#aeb6bf', // Tono secundario suave
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="bg-brand-beige text-brand-text font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-brand-beige/90 backdrop-blur-md z-50 border-b border-brand-sand transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl text-brand-dark tracking-wide hover:opacity-80 transition">
+                Alejandra Forero
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#inicio" class="text-sm uppercase tracking-widest hover:text-brand-accent transition">Inicio</a>
+                <a href="#sobre-mi" class="text-sm uppercase tracking-widest hover:text-brand-accent transition">Sobre Mí</a>
+                <a href="#servicios" class="text-sm uppercase tracking-widest hover:text-brand-accent transition">Terapia</a>
+                <a href="#contacto" class="text-sm uppercase tracking-widest hover:text-brand-accent transition">Contacto</a>
+                <a href="#contacto" class="bg-brand-dark text-white px-5 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-brand-accent transition duration-300 shadow-md">
+                    Pedir Cita
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-brand-dark focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-beige border-t border-brand-sand absolute w-full">
+            <div class="flex flex-col p-6 space-y-4 text-center">
+                <a href="#inicio" class="text-brand-dark hover:text-brand-accent transition">Inicio</a>
+                <a href="#sobre-mi" class="text-brand-dark hover:text-brand-accent transition">Sobre Mí</a>
+                <a href="#servicios" class="text-brand-dark hover:text-brand-accent transition">Terapia</a>
+                <a href="#contacto" class="text-brand-dark hover:text-brand-accent transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <!-- Background Texture/Image Placeholder -->
+            <img src=img/35925.jpg alt="Textura fondo" class="w-full h-full object-cover">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-left fade-in-up">
+                <span class="block text-brand-accent uppercase tracking-[0.2em] text-sm mb-4 font-bold">Psicóloga Clínica · Especialista en Educación Emocional</span>
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-brand-dark leading-tight mb-6">
+                    Seguridad, crecimiento <br> <span class="italic text-brand-accent/90">y bienestar.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed font-light">
+                    Un espacio seguro donde transformamos el conocimiento científico en herramientas para navegar tus vínculos y tu mundo interior.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-brand-dark text-white px-8 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-brand-accent transition duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Reserva tu sesión
+                    </a>
+                    <a href="#sobre-mi" class="border border-brand-dark text-brand-dark px-8 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-brand-dark hover:text-white transition duration-300 text-center">
+                        Conóceme mejor
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative h-[500px] md:h-[600px] w-full fade-in-up delay-200">
+                <!-- Image Placeholder: Representing Alejandra Forero -->
+                <div class="absolute inset-0 bg-brand-sand rounded-t-full rounded-b-[100px] overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition duration-700">
+                    <img src=img/35925.jpg alt="Alejandra Forero Psicóloga" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition duration-500">
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
+                    <p class="font-serif italic text-brand-dark text-lg">"Amar no es sobrevivir, es disfrutar."</p>
+                    <p class="text-xs text-gray-500 mt-2 uppercase tracking-wide">— Alejandra Forero</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quote Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center max-w-3xl fade-in-up">
+            <i class="fas fa-quote-left text-brand-accent text-3xl mb-6 opacity-50"></i>
+            <h2 class="font-serif text-2xl md:text-3xl text-brand-dark leading-relaxed">
+                "Ayudo a personas que atraviesan malestar emocional a estabilizar su estado de ánimo a través de un proceso terapéutico cercano y efectivo."
+            </h2>
+            <div class="w-24 h-1 bg-brand-accent mx-auto mt-8"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-brand-beige">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-xs font-bold tracking-widest text-gray-500 uppercase">¿En qué puedo ayudarte?</span>
+                <h2 class="font-serif text-4xl text-brand-dark mt-3">Áreas de Intervención</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer fade-in-up delay-100">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition duration-300">
+                        <i class="fas fa-user text-brand-dark group-hover:text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-dark mb-4">Terapia Individual</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                        Un espacio íntimo para explorar tu historia. Trabajamos autoestima, ansiedad, dependencia emocional y patrones de apego. Recupera tu fuerza interna y aprende a valorarte.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Gestión de la ansiedad</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Rupturas amorosas</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Autoexigencia</li>
+                    </ul>
+                    <a href="#contacto" class="text-brand-accent uppercase text-xs font-bold tracking-widest border-b border-brand-accent pb-1 hover:text-brand-dark hover:border-brand-dark transition">Saber más</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer fade-in-up delay-200 transform md:-translate-y-4">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition duration-300">
+                        <i class="fas fa-heart text-brand-dark group-hover:text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-dark mb-4">Terapia de Pareja</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                        ¿Sentís que os habéis desconectado? Trabajamos la comunicación, la confianza tras una infidelidad o simplemente el construir una relación más consciente y segura.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Mejora de comunicación</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Resolución de conflictos</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Reconexión emocional</li>
+                    </ul>
+                    <a href="#contacto" class="text-brand-accent uppercase text-xs font-bold tracking-widest border-b border-brand-accent pb-1 hover:text-brand-dark hover:border-brand-dark transition">Saber más</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer fade-in-up delay-300">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition duration-300">
+                        <i class="fas fa-laptop text-brand-dark group-hover:text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-dark mb-4">Consulta Online</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                        La misma cercanía y profesionalidad, desde la comodidad de tu hogar. Accesible desde cualquier parte del mundo para que la distancia no sea un impedimento.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Videollamada segura</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Flexibilidad horaria</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i>Sin desplazamientos</li>
+                    </ul>
+                    <a href="#contacto" class="text-brand-accent uppercase text-xs font-bold tracking-widest border-b border-brand-accent pb-1 hover:text-brand-dark hover:border-brand-dark transition">Saber más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative fade-in-up">
+                    <img src= img/35924.jpg alt="Sobre Alejandra Forero" class="rounded-lg shadow-xl w-full object-cover h-[600px] grayscale hover:grayscale-0 transition duration-700">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-sand rounded-full -z-10 opacity-50"></div>
+                    <div class="absolute -top-10 -left-10 w-20 h-20 bg-brand-accent rounded-full -z-10 opacity-30"></div>
+                </div>
+                
+                <div class="md:w-1/2 fade-in-up delay-100">
+                    <span class="text-brand-accent font-bold tracking-widest uppercase text-xs mb-2 block">Mi Historia</span>
+                    <h2 class="font-serif text-4xl text-brand-dark mb-6">Más que una psicóloga, una compañera de viaje.</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed font-light">
+                        Soy Alejandra Forero. Mi pasión es entender los vínculos humanos. En un mundo lleno de consejos superficiales, mi objetivo es aportar profundidad científica pero accesible.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed font-light">
+                        Especializada en <strong>trauma, apego y terapia de parejas</strong>, integro la psicología clínica con una visión humana y contemporánea. Creo firmemente que las relaciones sanas no caen del cielo: se construyen con autoconocimiento y herramientas adecuadas.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed font-light">
+                        Además de la consulta, disfruto divulgando en redes sociales y a través de mi libro <em>"Todo lo que me hubiera gustado saber antes de mi primer beso"</em>, acercando la salud mental a quienes buscan entenderse mejor.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <span class="block text-3xl font-serif text-brand-dark">Top 1</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">En Ventas (Libros)</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-serif text-brand-dark">+70k</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Comunidad</span>
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="inline-block border-b-2 border-brand-dark pb-1 text-brand-dark uppercase tracking-widest text-xs font-bold hover:text-brand-accent hover:border-brand-accent transition">
+                        Leer más sobre mí
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Parallax -->
+    <section class="py-32 bg-fixed bg-cover bg-center relative" style="background-image: url('img/35939.jpg');">
+        <div class="absolute inset-0 bg-brand-dark/60 backdrop-blur-sm"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
+            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
+            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
+            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
+            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
+            
+            <h3 class="font-serif text-2xl md:text-4xl text-white mb-8 italic leading-relaxed max-w-4xl mx-auto">
+                "La terapia con Alejandra me aportó mucha más confianza en mí, era muy atenta y dulce. Me ayudó mucho a trabajar en mi autocuidado, a enfocarme en mí, y conseguir mis objetivos."
+            </h3>
+            <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Paciente Anónimo</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-brand-beige">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                
+                <!-- Contact Info -->
+                <div class="md:w-2/5 bg-brand-dark text-white p-12 flex flex-col justify-between">
+                    <div>
+                        <h2 class="font-serif text-3xl mb-6">Hablemos</h2>
+                        <p class="text-white/70 mb-8 font-light leading-relaxed">
+                            Dar el primer paso nunca es fácil, pero es el más importante. Escríbeme y evaluaremos juntos cómo puedo ayudarte a recuperar tu bienestar.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-brand-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase text-white/50 tracking-widest">Email</p>
+                                    <p class="text-lg">contacto@alejandraforero.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-instagram text-brand-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase text-white/50 tracking-widest">Instagram</p>
+                                    <p class="text-lg">@aleforero</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-brand-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase text-white/50 tracking-widest">Consulta</p>
+                                    <p class="text-lg">Online & Presencial (Zaragoza)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <p class="text-xs text-white/30">© 2024 Alejandra Forero Psicología</p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="md:w-3/5 p-12 bg-white">
+                    <form onsubmit="event.preventDefault(); alert('Gracias por tu mensaje. Te responderé lo antes posible.');" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase font-bold text-gray-500 tracking-widest">Nombre</label>
+                                <input type="text" class="w-full border-b border-gray-300 py-2 focus:border-brand-accent focus:outline-none transition bg-transparent" placeholder="Tu nombre">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase font-bold text-gray-500 tracking-widest">Apellidos</label>
+                                <input type="text" class="w-full border-b border-gray-300 py-2 focus:border-brand-accent focus:outline-none transition bg-transparent" placeholder="Tus apellidos">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase font-bold text-gray-500 tracking-widest">Email</label>
+                            <input type="email" class="w-full border-b border-gray-300 py-2 focus:border-brand-accent focus:outline-none transition bg-transparent" placeholder="ejemplo@correo.com">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase font-bold text-gray-500 tracking-widest">Motivo de consulta</label>
+                            <select class="w-full border-b border-gray-300 py-2 focus:border-brand-accent focus:outline-none transition bg-transparent text-gray-600">
+                                <option>Selecciona una opción</option>
+                                <option>Terapia Individual</option>
+                                <option>Terapia de Pareja</option>
+                                <option>Duda o Pregunta</option>
+                                <option>Prensa/Colaboración</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase font-bold text-gray-500 tracking-widest">Mensaje</label>
+                            <textarea rows="4" class="w-full border-b border-gray-300 py-2 focus:border-brand-accent focus:outline-none transition bg-transparent resize-none" placeholder="Cuéntame brevemente qué necesitas..."></textarea>
+                        </div>
+
+                        <button type="submit" class="bg-brand-accent text-white px-10 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-brand-dark transition duration-300 shadow-md w-full md:w-auto">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-beige border-t border-brand-sand py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="font-serif text-2xl text-brand-dark">Alejandra Forero</span>
+            </div>
+            
+            <div class="flex space-x-6 mb-4 md:mb-0">
+                <a href="#" class="text-gray-500 hover:text-brand-accent transition"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-brand-accent transition"><i class="fab fa-tiktok text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-brand-accent transition"><i class="fab fa-youtube text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-brand-accent transition"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
+
+            <div class="text-xs text-gray-400 flex flex-col md:flex-row md:space-x-4 text-center">
+                <a href="#" class="hover:text-brand-dark">Aviso Legal</a>
+                <span class="hidden md:inline">|</span>
+                <a href="#" class="hover:text-brand-dark">Política de Privacidad</a>
+                <span class="hidden md:inline">|</span>
+                <a href="#" class="hover:text-brand-dark">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('bg-brand-beige/90', 'bg-white/95');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('bg-white/95', 'bg-brand-beige/90');
+            }
+        });
+    </script>
+</body>
+</html>
