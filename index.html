@@ -29,22 +29,42 @@
             }
         }
     </script>
-    <style>
+<style>
+        /* Animaciones generales */
         .fade-in-up {
             animation: fadeInUp 1s ease-out forwards;
             opacity: 0;
             transform: translateY(20px);
         }
         @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
-    </style>
+
+        /* Animación del Banner Infinito (Marquee) */
+        .animate-marquee {
+            display: flex;
+            width: max-content; /* Se asegura que el contenido no se corte */
+            animation: scroll 40s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Se mueve la mitad de su longitud total */
+        }
+                /* Animación suave para el botón de WhatsApp (Color Brand Accent: 212, 163, 115) */
+        @keyframes pulse-soft {
+            0% { box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.7); transform: scale(1); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 163, 115, 0); transform: scale(1.05); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 163, 115, 0); transform: scale(1); }
+        }
+        .whatsapp-pulse {
+            animation: pulse-soft 2s infinite;
+        }
+
+</style>
 </head>
 <body class="bg-brand-beige text-brand-text font-sans antialiased selection:bg-brand-accent selection:text-white">
 
@@ -122,6 +142,70 @@
             </div>
         </div>
     </header>
+
+    <div class="bg-brand-dark text-white py-5 overflow-hidden border-y border-brand-accent relative z-20">
+        <!-- El contenedor 'animate-marquee' mueve todo el contenido a la izquierda -->
+        <div class="animate-marquee whitespace-nowrap">
+            
+            <!-- GRUPO 1: Contenido original -->
+            <div class="flex items-center mx-4">
+                <span class="text-sm uppercase tracking-[0.25em] font-light">bienestar</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">autoestima</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">acompañamiento</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">escucha</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">confianza</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">resiliencia</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">seguridad</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">empatía</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">comprensión</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">cambio</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">esperanza</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">calma</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+            </div>
+
+            <!-- GRUPO 2: Duplicado para crear el efecto bucle infinito -->
+            <div class="flex items-center mx-4">
+                <span class="text-sm uppercase tracking-[0.25em] font-light">bienestar</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">autoestima</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">acompañamiento</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">escucha</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">confianza</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">resiliencia</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">seguridad</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">empatía</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">comprensión</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">cambio</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">esperanza</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+                <span class="text-sm uppercase tracking-[0.25em] font-light">calma</span>
+                <i class="fas fa-circle text-[6px] text-brand-accent mx-8"></i>
+            </div>
+            
+        </div>
+    </div>
+    <!-- FIN BANNER -->
 
     <!-- Quote Section -->
     <section class="py-24 bg-white">
@@ -238,21 +322,128 @@
             </div>
         </div>
     </section>
+     <section id="proceso" class="py-24 bg-brand-beige">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-xs font-bold tracking-widest text-gray-500 uppercase">La metodología</span>
+                <h2 class="font-serif text-4xl text-brand-dark mt-3">Este será nuestro camino</h2>
+            </div>
 
-    <!-- Testimonial Parallax -->
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                
+                <!-- Paso 1 -->
+                <div class="text-center group fade-in-up delay-100">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-accent group-hover:text-white transition duration-300 relative z-10">
+                        <span class="font-serif text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">Evaluación</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        En las primeras sesiones exploraremos tu historia, tus necesidades y qué te ha traído hasta aquí para crear un mapa claro.
+                    </p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="text-center group fade-in-up delay-200">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-accent group-hover:text-white transition duration-300 relative z-10">
+                        <span class="font-serif text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">Objetivos</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Definiremos juntos hacia dónde quieres ir y qué cambios necesitas para sentirte mejor contigo mismo y tus relaciones.
+                    </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="text-center group fade-in-up delay-300">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-accent group-hover:text-white transition duration-300 relative z-10">
+                        <span class="font-serif text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">Herramientas</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Trabajaremos con técnicas prácticas para gestionar emociones, romper patrones y construir seguridad interna.
+                    </p>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="text-center group fade-in-up delay-300" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-accent group-hover:text-white transition duration-300 relative z-10">
+                        <span class="font-serif text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">Cierre</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Integraremos lo aprendido para que puedas caminar con autonomía, calma y confianza en tus propios recursos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Testimonial Parallax (SLIDER AUTOMÁTICO) -->
+    <!-- AQUÍ PUEDES PONER TU IMAGEN: Reemplaza la URL larga por 'img/tu-imagen.jpg' -->
     <section class="py-32 bg-fixed bg-cover bg-center relative" style="background-image: url('img/35939.jpg');">
         <div class="absolute inset-0 bg-brand-dark/60 backdrop-blur-sm"></div>
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
-            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
-            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
-            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
-            <i class="fas fa-star text-brand-accent text-2xl mb-4"></i>
+        <div class="container mx-auto px-6 relative z-10 text-center overflow-hidden">
             
-            <h3 class="font-serif text-2xl md:text-4xl text-white mb-8 italic leading-relaxed max-w-4xl mx-auto">
-                "La terapia con Alejandra me aportó mucha más confianza en mí, era muy atenta y dulce. Me ayudó mucho a trabajar en mi autocuidado, a enfocarme en mí, y conseguir mis objetivos."
-            </h3>
-            <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Paciente Anónimo</p>
+            <!-- Contenedor del Slider -->
+            <div id="testimonial-slider" class="flex transition-transform duration-1000 ease-in-out w-full">
+                
+                <!-- Slide 1 -->
+                <div class="w-full flex-shrink-0 px-4">
+                    <!-- Estrellas (movidas aquí) -->
+                    <div class="mb-6">
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl md:text-4xl text-white mb-4 italic leading-relaxed max-w-4xl mx-auto">
+                        "La terapia con Julia me aportó mucha más confianza en mí, era muy atenta y dulce. Me ayudó mucho a trabajar en mi autocuidado."
+                    </h3>
+                    <p class="text-white/80 uppercase tracking-widest text-sm font-bold mt-6">— María G.</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="w-full flex-shrink-0 px-4">
+                    <!-- Estrellas (movidas aquí) -->
+                    <div class="mb-6">
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl md:text-4xl text-white mb-4 italic leading-relaxed max-w-4xl mx-auto">
+                        "Llegamos al borde de la ruptura y gracias a las sesiones hemos aprendido a comunicarnos desde el respeto y la empatía."
+                    </h3>
+                    <p class="text-white/80 uppercase tracking-widest text-sm font-bold mt-6">— Carlos y Ana</p>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="w-full flex-shrink-0 px-4">
+                    <!-- Estrellas (movidas aquí) -->
+                    <div class="mb-6">
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl md:text-4xl text-white mb-4 italic leading-relaxed max-w-4xl mx-auto">
+                        "Su enfoque me hizo sentir segura desde el primer día. Una profesional que realmente escucha y te da herramientas prácticas."
+                    </h3>
+                    <p class="text-white/80 uppercase tracking-widest text-sm font-bold mt-6">— Laura P.</p>
+                </div>
+
+            </div>
+            
+            <!-- Indicadores (Puntos) -->
+            <div class="flex justify-center mt-8 space-x-3">
+                <div class="w-2 h-2 rounded-full bg-brand-accent cursor-pointer transition-all duration-300 hover:scale-125" onclick="goToSlide(0)"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-300 hover:scale-125" onclick="goToSlide(1)"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-300 hover:scale-125" onclick="goToSlide(2)"></div>
+            </div>
+
         </div>
     </section>
 
@@ -376,6 +567,16 @@
         </div>
     </footer>
 
+        <!-- WhatsApp Button (Interactive) -->
+    <!-- Se cambia el color a brand-accent (tierra suave) para que coincida con la web -->
+    <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-brand-accent text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition duration-300 z-50 whatsapp-pulse group">
+        <i class="fab fa-whatsapp"></i>
+        <!-- Tooltip / Label -->
+        <span class="absolute right-16 bg-white text-brand-dark text-xs font-bold py-2 px-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none border border-brand-sand">
+            ¿Hablamos?
+        </span>
+    </a>
+
     <script>
         // Simple script to handle navbar background on scroll
         const navbar = document.getElementById('navbar');
@@ -388,6 +589,48 @@
                 navbar.classList.replace('bg-white/95', 'bg-brand-beige/90');
             }
         });
+
+        // Testimonial Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#testimonial-slider > div');
+        const slider = document.getElementById('testimonial-slider');
+        const dots = document.querySelectorAll('.rounded-full.w-2'); // Select indicators
+        const totalSlides = slides.length;
+
+        function updateDots(index) {
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-brand-accent');
+                } else {
+                    dot.classList.add('bg-white/50');
+                    dot.classList.remove('bg-brand-accent');
+                }
+            });
+        }
+
+        function showSlide(index) {
+            if (index >= totalSlides) currentSlide = 0;
+            else if (index < 0) currentSlide = totalSlides - 1;
+            else currentSlide = index;
+            
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDots(currentSlide);
+        }
+        // Global function for onclick events
+        window.goToSlide = function(index) {
+            showSlide(index);
+            // Reset interval when user interacts manually
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Start Auto scroll every 5 seconds
+        let slideInterval = setInterval(nextSlide, 5000);
     </script>
 </body>
 </html>
