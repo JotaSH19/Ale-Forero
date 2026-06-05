@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Imbue:opsz,wght@10..100,100..900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -22,8 +23,9 @@
                         'brand-green': '#aeb6bf', // Tono secundario suave
                     },
                     fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Lato"', 'sans-serif'],
+                        // Cambio: Se define Imbue (serif) y Archivo Narrow (sans)
+                        serif: ['"Imbue"', 'serif'],
+                        sans: ['"Archivo Narrow"', 'sans-serif'],
                     }
                 }
             }
@@ -240,11 +242,13 @@
                         La terapia se convierte así en un espacio para recuperar equilibrio emocional, fortalecer recursos internos y construir cambios más conscientes y sostenibles.
 
                     </p>
+                    <!--
                     <ul class="text-sm text-gray-500 space-y-2 mb-6">
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Gestión de la ansiedad</li>
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Rupturas amorosas</li>
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Autoexigencia</li>
                     </ul>
+                    -->
                     <a href="#contacto" class="text-brand-accent uppercase text-xs font-bold tracking-widest border-b border-brand-accent pb-1 hover:text-brand-dark hover:border-brand-dark transition">Saber más</a>
                 </div>
 
@@ -259,11 +263,13 @@
                         Más que enfocarnos en etiquetas o diagnósticos, buscamos entender qué hay detrás de lo que sientes, cómo influye en tu vida cotidiana y qué nuevas formas de relación contigo y con los demás puedes construir. 
                         El grupo se convierte así en un lugar de apoyo, aprendizaje y transformación compartida.
                     </p>
+                    <!--
                     <ul class="text-sm text-gray-500 space-y-2 mb-6">
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Mejora de comunicación</li>
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Resolución de conflictos</li>
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Reconexión emocional</li>
                     </ul>
+                    -->
                     <a href="#contacto" class="text-brand-accent uppercase text-xs font-bold tracking-widest border-b border-brand-accent pb-1 hover:text-brand-dark hover:border-brand-dark transition">Saber más</a>
                 </div>
 
@@ -277,12 +283,14 @@
                        Un espacio de orientación y construcción clínica para psicólogos que están iniciando su práctica o desean fortalecer su manera de acompañar procesos terapéuticos desde un enfoque más humano, claro y coherente con su estilo profesional. <br>
                        Más que enfocarnos únicamente en técnicas o protocolos, buscamos comprender el sentido del caso, la relación terapéutica y las dinámicas que sostienen el malestar, para construir intervenciones más conscientes, organizadas y efectivas. <br>
                        La mentoría está pensada como un espacio cercano, seguro y colaborativo, donde puedas desarrollar confianza clínica, ampliar tu mirada terapéutica y encontrar herramientas útiles para tu práctica cotidiana.
-
+                    </p>
+                    <!--    
                     <ul class="text-sm text-gray-500 space-y-2 mb-6">
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Videollamada segura</li>
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Flexibilidad horaria</li>
                         <li><i class="fas fa-check text-brand-accent mr-2"></i>Sin desplazamientos</li>
                     </ul>
+                    -->
                     <a href="#contacto" class="text-brand-accent uppercase text-xs font-bold tracking-widest border-b border-brand-accent pb-1 hover:text-brand-dark hover:border-brand-dark transition">Saber más</a>
                 </div>
             </div>
@@ -373,7 +381,7 @@
                     <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-accent group-hover:text-white transition duration-300 relative z-10">
                         <span class="font-serif text-2xl font-bold">3</span>
                     </div>
-                    <h3 class="font-serif text-xl text-brand-dark mb-3">DAR HERRAMIENTAS PRACTICAS</h3>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">DAR HERRAMIENTAS PRÁCTICAS</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         Recibirás recursos ajustados a tu forma de ser y a tu vida real. No son fórmulas cerradas ni etiquetas vacías, sino herramientas que podrás aplicar en tu día a día para afrontar los desafíos de manera más flexible.
                     </p>
@@ -398,64 +406,82 @@
     <section class="py-32 bg-fixed bg-cover bg-center relative" style="background-image: url('img/35939.jpg');">
         <div class="absolute inset-0 bg-brand-dark/60 backdrop-blur-sm"></div>
         <div class="container mx-auto px-6 relative z-10 text-center overflow-hidden">
-            
-            <!-- Contenedor del Slider -->
-            <div id="testimonial-slider" class="flex transition-transform duration-1000 ease-in-out w-full">
+
+            <!-- Título Fijo de Testimonios -->
+            <div class="mb-12">
+                <h2 class="font-serif text-4xl md:text-5xl text-white">Testimonios pacientes</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-6"></div>
+            </div>
+
+            <!-- Contenedor Relativo para Slider y Flechas -->
+            <div class="relative w-full max-w-6xl mx-auto">
                 
-                <!-- Slide 1 -->
-                <div class="w-full flex-shrink-0 px-4">
-                    <!-- Estrellas (movidas aquí) -->
-                    <div class="mb-6">
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
+                <!-- Flecha Izquierda -->
+                <button onclick="goToSlide(currentSlide - 1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-brand-accent transition-all duration-300 text-3xl md:text-5xl focus:outline-none hover:scale-110">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+
+                <!-- Contenedor del Slider -->
+                <div id="testimonial-slider" class="flex transition-transform duration-1000 ease-in-out w-full items-center">
+                    
+                    <!-- Slide 1 -->
+                    <div class="w-full flex-shrink-0 px-10 md:px-20">
+                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                            "La terapia con Alejandra me aportó mucha más confianza en mí, era muy atenta y comprensiva. Me ayudó mucho a trabajar en mi autocuidado."
+                        </h3>
+                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— María G.</p>
                     </div>
-                    <h3 class="font-serif text-2xl md:text-4xl text-white mb-4 italic leading-relaxed max-w-4xl mx-auto">
-                        "La terapia con Alejandra me aportó mucha más confianza en mí, era muy atenta y comprensiva. Me ayudó mucho a trabajar en mi autocuidado."
-                    </h3>
-                    <p class="text-white/80 uppercase tracking-widest text-sm font-bold mt-6">— María G.</p>
+
+                    <!-- Slide 2 -->
+                    <div class="w-full flex-shrink-0 px-10 md:px-20">
+                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                            "Describir mi proceso con Alejandra es algo muy conmovedor para mí porque es pensar en todo el camino que he recorrido desde que la conocí. Yo ya había tenido espacios con otros profesionales y quizás esos puntos de referencia me ayudaron a valorar aún más la calidad de la terapia con ella. Gracias a su escucha y presencia plena, a sus preguntas, y a su empatía he podido tomar decisiones muy importantes para mi vida. Puedo decir que gracias a su acompañamiento me conozco más y me trato con más compasión. Me siento muy feliz y agradecida de que sea mi psicóloga porque como se lo he dicho a ella, para mi es sencillamente la mejor del mundo"
+                        </h3>
+                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Anónimo</p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="w-full flex-shrink-0 px-10 md:px-20">
+                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                            "Cuando llegué con Ale no tenía ni torre ni base, estaba pasando por una etapa de confusión en mi vida, me sentía perdida y desorientada. Ale me ayudó a identificar los duelos no resueltos, a poner límites sanos cuando es necesario, a respetar estos límites y mantenerlos, a ser compasiva conmigo misma porque no soy perfecta, a soltar el control de lo que se sale de mis manos, a crear mi lugar seguro con personas que ven mi valor y respetan quien soy, me ayudó a transitar una ruptura viviendo el dolor pero evitando el sufrimiento, me ayudó a reencontrarme y reorganizar quien soy yo ahora aprovechando el momento de "remodelación" que estaba teniendo mi cerebro para construir a la nueva Paola que quiero ser y me acompañó a enfrentar mi demonio de la "aprobación social" con el que sigo batallando todos los días pero de un lugar más libre y conciente."
+                        </h3>
+                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Paola, Colombia</p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="w-full flex-shrink-0 px-10 md:px-20">
+                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                            "La terapia de pareja con Alejandra fue una experiencia profundamente enriquecedora para nuestra relación. Nos brindó un espacio de escucha, comprensión y crecimiento que nos permitió identificar y trabajar aspectos que estaban afectando nuestra convivencia. Gracias a su orientación profesional, logramos mejorar significativamente nuestra comunicación, fortalecer la confianza y aprender herramientas para resolver conflictos de una manera más sana y constructiva. También nos ayudó a comprender mejor nuestras necesidades individuales y cómo estas impactaban nuestra relación. Hoy nos sentimos más unidos, con una relación más sólida y una mejor capacidad para afrontar juntos los retos de la vida. Recomendamos plenamente su trabajo a todas las parejas que deseen fortalecer su vínculo y crecer juntos."
+                        </h3>
+                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">—  Juliana y Sergio, Colombia.</p>
+                    </div>
+                </div>
+                    <!-- Slide 5 -->
+                    <div class="w-full flex-shrink-0 px-10 md:px-20">
+                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                            "Llegué a terapia con Alejandra en uno de los momentos más difíciles de mi vida. Los ataques de ansiedad y de pánico habían afectado profundamente mi bienestar y mi tranquilidad. Desde el primer encuentro encontré un espacio seguro, empático y libre de juicios.
+                            Gracias a su acompañamiento profesional, aprendí herramientas prácticas para comprender y gestionar mis emociones, recuperar la calma y volver a confiar en mí misma. Su orientación no solo me ayudó a superar una etapa muy compleja, sino que transformó mi manera de enfrentar los desafíos de la vida. 
+                            Hoy puedo decir con total sinceridad que su terapia marcó un antes y un después en mi vida. Estaré siempre agradecida por su apoyo, dedicación y calidad humana."
+                        </h3>
+                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Anónimo.</p>
+                    </div>
+                </div>
+                    <!-- Slide 6 -->
+                    <div class="w-full flex-shrink-0 px-10 md:px-20">
+                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                            "Después de romperse mi matrimonio de 6 años quede perdida, me refugie en el alcohol, empecé a consumir todo tipo de sustancias, destroce lo poco que me quedaba. En el proceso con Alejandra logre perder el miedo a mirar hacia adentro, poco a poco revisamos y resolvimos las heridas que me habían marcado tanto. Logre soltar y lo que más amo es que pude construir una vida que me gusta, disfruto de mis esencia pero sin excesos, disfruto de vincularme desde la elección y no desde la necesidad, disfruto los domingos sola, disfruto de una vida equilibrada, Gracias. 
+                        </h3>
+                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Dani, Australia.</p>
+                    </div>
                 </div>
 
-                <!-- Slide 2 -->
-                <div class="w-full flex-shrink-0 px-4">
-                    <!-- Estrellas (movidas aquí) -->
-                    <div class="mb-6">
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl md:text-4xl text-white mb-4 italic leading-relaxed max-w-4xl mx-auto">
-                        "Describir mi proceso con Alejandra es algo muy conmovedor para mí porque es pensar en todo el camino que he recorrido desde que la conocí. Yo ya había tenido espacios con otros profesionales y quizás esos puntos de referencia me ayudaron a valorar aún más la calidad de la terapia con ella. Gracias a su escucha y presencia plena, a sus preguntas, y a su empatía he podido tomar decisiones muy importantes para mi vida. Puedo decir que gracias a su acompañamiento me conozco más y me trato con más compasión. 
-                         Me siento muy feliz y agradecida de que sea mi psicóloga porque como se lo he dicho a ella, para mi es sencillamente la mejor del mundo"
-                    </h3>
-                    <p class="text-white/80 uppercase tracking-widest text-sm font-bold mt-6">— Anónimo</p>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="w-full flex-shrink-0 px-4">
-                    <!-- Estrellas (movidas aquí) -->
-                    <div class="mb-6">
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                        <i class="fas fa-star text-brand-accent text-2xl mx-1"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl md:text-4xl text-white mb-4 italic leading-relaxed max-w-4xl mx-auto">
-                        "Cuando llegué con Ale no tenía ni torre ni base, estaba pasando por una etapa de confusión en mi vida, me sentía perdida y desorientada. Ale me ayudó a identificar los duelos no resueltos, a poner límites sanos cuando es necesario, a respetar estos límites y mantenerlos, a ser compasiva conmigo misma porque no soy perfecta, a soltar el control de lo que se sale de mis manos, a crear mi lugar seguro con personas que ven mi valor y respetan quien soy,
-                         me ayudó a transitar una ruptura viviendo el dolor pero evitando el sufrimiento, me ayudó a reencontrarme y reorganizar quien soy yo ahora aprovechando el momento de "remodelación" que estaba teniendo mi cerebro para construir a la nueva Paola que quiero ser y me acompañó a enfrentar mi demonio de la "aprobación social" con el que sigo batallando todos los días pero de un lugar más libre y conciente."
-                    </h3>
-                    <p class="text-white/80 uppercase tracking-widest text-sm font-bold mt-6">— Paola, Colombia</p>
-                </div>
-
+                <!-- Flecha Derecha -->
+                <button onclick="goToSlide(currentSlide + 1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-brand-accent transition-all duration-300 text-3xl md:text-5xl focus:outline-none hover:scale-110">
+                    <i class="fas fa-angle-right"></i>
+                </button>
             </div>
             
             <!-- Indicadores (Puntos) -->
-            <div class="flex justify-center mt-8 space-x-3">
+            <div class="flex justify-center mt-12 space-x-3">
                 <div class="w-2 h-2 rounded-full bg-brand-accent cursor-pointer transition-all duration-300 hover:scale-125" onclick="goToSlide(0)"></div>
                 <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-300 hover:scale-125" onclick="goToSlide(1)"></div>
                 <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-300 hover:scale-125" onclick="goToSlide(2)"></div>
@@ -593,7 +619,78 @@
             ¿Hablamos?
         </span>
     </a>
+    <!-- MODALES (Pop-ups) -->
+    
+    <!-- Modal Terapia Individual -->
+    <div id="modal-individual" class="fixed inset-0 z-[100] hidden items-center justify-center overflow-y-auto overflow-x-hidden bg-brand-dark/80 backdrop-blur-sm transition-opacity" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="relative w-full max-w-2xl p-4 sm:p-6 fade-in-up">
+            <div class="relative bg-white rounded-3xl shadow-2xl p-8 sm:p-12 text-left overflow-hidden">
+                <!-- Botón Cerrar -->
+                <button type="button" onclick="closeModal('modal-individual')" class="absolute top-6 right-6 text-gray-400 hover:text-brand-accent transition-colors focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                
+                <h3 class="font-serif text-3xl sm:text-4xl text-brand-dark mb-6" id="modal-title">Terapia Individual</h3>
+                
+                <div class="space-y-4 text-gray-600 tracking-wide leading-relaxed font-light">
+                    <p>Abordamos temáticas como: Depresión, ansiedad, autoestima, dependencia emocional, estado de animo bajo, rupturas, problemas existenciales, problemas interpersonales y dating, relaciones insatisfactorias, alto rendimiento.</p>
+                </div>
+                
+                <div class="mt-10 flex justify-end">
+                    <button type="button" onclick="closeModal('modal-individual')" class="bg-brand-sand text-brand-dark px-8 py-3 rounded-full text-xs uppercase tracking-widest hover:bg-brand-accent hover:text-white transition duration-300">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Modal Consulta Grupal -->
+    <div id="modal-grupal" class="fixed inset-0 z-[100] hidden items-center justify-center overflow-y-auto overflow-x-hidden bg-brand-dark/80 backdrop-blur-sm transition-opacity" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="relative w-full max-w-2xl p-4 sm:p-6 fade-in-up">
+            <div class="relative bg-white rounded-3xl shadow-2xl p-8 sm:p-12 text-left overflow-hidden">
+                <button type="button" onclick="closeModal('modal-grupal')" class="absolute top-6 right-6 text-gray-400 hover:text-brand-accent transition-colors focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                
+                <h3 class="font-serif text-3xl sm:text-4xl text-brand-dark mb-6">Consulta Grupal</h3>
+                
+                <div class="space-y-4 text-gray-600 tracking-wide leading-relaxed font-light">
+                    <p>Abordamos temáticas como: Personas que sienten demasiado,  aprender a descansar, productividad excesiva, autoexigencia y agotamiento crónico, vínculos que duelen, relaciones afectivas,  dependencia emocional y patrones que se repiten. Identidad, desconexión emocional y reconstrucción personal. .</p>
+                </div>
+                
+                <div class="mt-10 flex justify-end">
+                    <button type="button" onclick="closeModal('modal-grupal')" class="bg-brand-sand text-brand-dark px-8 py-3 rounded-full text-xs uppercase tracking-widest hover:bg-brand-accent hover:text-white transition duration-300">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mentoría -->
+    <div id="modal-mentoria" class="fixed inset-0 z-[100] hidden items-center justify-center overflow-y-auto overflow-x-hidden bg-brand-dark/80 backdrop-blur-sm transition-opacity" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="relative w-full max-w-2xl p-4 sm:p-6 fade-in-up">
+            <div class="relative bg-white rounded-3xl shadow-2xl p-8 sm:p-12 text-left overflow-hidden">
+                <button type="button" onclick="closeModal('modal-mentoria')" class="absolute top-6 right-6 text-gray-400 hover:text-brand-accent transition-colors focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                
+                <h3 class="font-serif text-3xl sm:text-4xl text-brand-dark mb-6">Mentoría para Psicólogos</h3>
+                
+                <div class="space-y-4 text-gray-600 tracking-wide leading-relaxed font-light">
+                    <p> Abordamos temáticas como: Construcción y desarrollo del estilo terapéutico propio, Identificación del eje central del caso, organización y diseño de planes de intervención, formulación clínica y comprensión del caso, herramientas prácticas para enriquecer el proceso terapéutico, integración flexible de estrategias aplicadas desde distintos enfoques. </p>
+                </div>
+                
+                <div class="mt-10 flex justify-end">
+                    <button type="button" onclick="closeModal('modal-mentoria')" class="bg-brand-sand text-brand-dark px-8 py-3 rounded-full text-xs uppercase tracking-widest hover:bg-brand-accent hover:text-white transition duration-300">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODALES -->
     <script>
         // Simple script to handle navbar background on scroll
         const navbar = document.getElementById('navbar');
@@ -648,6 +745,33 @@
 
         // Start Auto scroll every 5 seconds
         let slideInterval = setInterval(nextSlide, 5000);
+                // Lógica para Modales
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            // Quitamos la clase 'hidden' y usamos flex para centrar
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Evitar que el fondo haga scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            // Restaurar scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido blanco
+        window.onclick = function(event) {
+            if (event.target.classList.contains('bg-brand-dark/80')) {
+                // event.target es el fondo oscuro
+                event.target.classList.add('hidden');
+                event.target.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
     </script>
 </body>
 </html>
