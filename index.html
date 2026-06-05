@@ -376,65 +376,73 @@
                 <div class="w-24 h-1 bg-brand-accent mx-auto mt-6"></div>
             </div>
 
-            <!-- Contenedor Relativo para Slider y Flechas -->
-            <div class="relative w-full max-w-6xl mx-auto">
+            <!-- Contenedor Relativo para Slider y Flechas. Quitamos el max-w aquí para que ocupe todo el ancho -->
+            <div class="relative w-full mx-auto">
                 
                 <!-- Flecha Izquierda -->
                 <button onclick="goToSlide(currentSlide - 1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-brand-accent transition-all duration-300 text-3xl md:text-5xl focus:outline-none hover:scale-110">
                     <i class="fas fa-angle-left"></i>
                 </button>
 
-                <!-- Contenedor del Slider -->
-                <div id="testimonial-slider" class="flex transition-transform duration-1000 ease-in-out w-full items-center">
-                    
-                    <!-- Slide 1 -->
-                    <div class="w-full flex-shrink-0 px-10 md:px-20">
-                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
-                            "La terapia con Alejandra me aportó mucha más confianza en mí, era muy atenta y comprensiva. Me ayudó mucho a trabajar en mi autocuidado."
-                        </h3>
-                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— María G.</p>
-                    </div>
+                <!-- Contenedor del Slider (Aseguramos que oculte lo que sobra) -->
+                <div class="overflow-hidden w-full max-w-6xl mx-auto">
+                    <div id="testimonial-slider" class="flex transition-transform duration-1000 ease-in-out w-full items-center">
+                        
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0 px-10 md:px-20">
+                            <!-- Letra reducida a text-lg md:text-xl -->
+                            <h3 class="font-serif text-lg md:text-xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                                "La terapia con Alejandra me aportó mucha más confianza en mí, era muy atenta y comprensiva. Me ayudó mucho a trabajar en mi autocuidado."
+                            </h3>
+                            <p class="text-white/80 uppercase tracking-widest text-xs font-bold">— María G.</p>
+                        </div>
 
-                    <!-- Slide 2 -->
-                    <div class="w-full flex-shrink-0 px-10 md:px-20">
-                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
-                            "Describir mi proceso con Alejandra es algo muy conmovedor para mí porque es pensar en todo el camino que he recorrido desde que la conocí. Yo ya había tenido espacios con otros profesionales y quizás esos puntos de referencia me ayudaron a valorar aún más la calidad de la terapia con ella. Gracias a su escucha y presencia plena, a sus preguntas, y a su empatía he podido tomar decisiones muy importantes para mi vida. Puedo decir que gracias a su acompañamiento me conozco más y me trato con más compasión. Me siento muy feliz y agradecida de que sea mi psicóloga porque como se lo he dicho a ella, para mi es sencillamente la mejor del mundo"
-                        </h3>
-                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Anónimo</p>
-                    </div>
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0 px-10 md:px-20">
+                            <!-- Letra reducida a text-lg md:text-xl -->
+                            <h3 class="font-serif text-lg md:text-xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                                "Describir mi proceso con Alejandra es algo muy conmovedor para mí porque es pensar en todo el camino que he recorrido desde que la conocí. Yo ya había tenido espacios con otros profesionales y quizás esos puntos de referencia me ayudaron a valorar aún más la calidad de la terapia con ella. Gracias a su escucha y presencia plena, a sus preguntas, y a su empatía he podido tomar decisiones muy importantes para mi vida. Puedo decir que gracias a su acompañamiento me conozco más y me trato con más compasión. Me siento muy feliz y agradecida de que sea mi psicóloga porque como se lo he dicho a ella, para mi es sencillamente la mejor del mundo"
+                            </h3>
+                            <p class="text-white/80 uppercase tracking-widest text-xs font-bold">— Anónimo</p>
+                        </div>
 
-                    <!-- Slide 3 -->
-                    <div class="w-full flex-shrink-0 px-10 md:px-20">
-                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
-                            "Cuando llegué con Ale no tenía ni torre ni base, estaba pasando por una etapa de confusión en mi vida, me sentía perdida y desorientada. Ale me ayudó a identificar los duelos no resueltos, a poner límites sanos cuando es necesario, a respetar estos límites y mantenerlos, a ser compasiva conmigo misma porque no soy perfecta, a soltar el control de lo que se sale de mis manos, a crear mi lugar seguro con personas que ven mi valor y respetan quien soy, me ayudó a transitar una ruptura viviendo el dolor pero evitando el sufrimiento, me ayudó a reencontrarme y reorganizar quien soy yo ahora aprovechando el momento de "remodelación" que estaba teniendo mi cerebro para construir a la nueva Paola que quiero ser y me acompañó a enfrentar mi demonio de la "aprobación social" con el que sigo batallando todos los días pero de un lugar más libre y conciente."
-                        </h3>
-                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Paola, Colombia</p>
-                    </div>
+                        <!-- Slide 3 -->
+                        <div class="w-full flex-shrink-0 px-10 md:px-20">
+                            <!-- Letra reducida a text-lg md:text-xl -->
+                            <h3 class="font-serif text-lg md:text-xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                                "Cuando llegué con Ale no tenía ni torre ni base, estaba pasando por una etapa de confusión en mi vida, me sentía perdida y desorientada. Ale me ayudó a identificar los duelos no resueltos, a poner límites sanos cuando es necesario, a respetar estos límites y mantenerlos, a ser compasiva conmigo misma porque no soy perfecta, a soltar el control de lo que se sale de mis manos, a crear mi lugar seguro con personas que ven mi valor y respetan quien soy, me ayudó a transitar una ruptura viviendo el dolor pero evitando el sufrimiento, me ayudó a reencontrarme y reorganizar quien soy yo ahora aprovechando el momento de "remodelación" que estaba teniendo mi cerebro para construir a la nueva Paola que quiero ser y me acompañó a enfrentar mi demonio de la "aprobación social" con el que sigo batallando todos los días pero de un lugar más libre y conciente."
+                            </h3>
+                            <p class="text-white/80 uppercase tracking-widest text-xs font-bold">— Paola, Colombia</p>
+                        </div>
 
-                    <!-- Slide 4 -->
-                    <div class="w-full flex-shrink-0 px-10 md:px-20">
-                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
-                            "La terapia de pareja con Alejandra fue una experiencia profundamente enriquecedora para nuestra relación. Nos brindó un espacio de escucha, comprensión y crecimiento que nos permitió identificar y trabajar aspectos que estaban afectando nuestra convivencia. Gracias a su orientación profesional, logramos mejorar significativamente nuestra comunicación, fortalecer la confianza y aprender herramientas para resolver conflictos de una manera más sana y constructiva. También nos ayudó a comprender mejor nuestras necesidades individuales y cómo estas impactaban nuestra relación. Hoy nos sentimos más unidos, con una relación más sólida y una mejor capacidad para afrontar juntos los retos de la vida. Recomendamos plenamente su trabajo a todas las parejas que deseen fortalecer su vínculo y crecer juntos."
-                        </h3>
-                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">—  Juliana y Sergio, Colombia.</p>
-                    </div>
+                        <!-- Slide 4 -->
+                        <div class="w-full flex-shrink-0 px-10 md:px-20">
+                            <!-- Letra reducida a text-lg md:text-xl -->
+                            <h3 class="font-serif text-lg md:text-xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                                "La terapia de pareja con Alejandra fue una experiencia profundamente enriquecedora para nuestra relación. Nos brindó un espacio de escucha, comprensión y crecimiento que nos permitió identificar y trabajar aspectos que estaban afectando nuestra convivencia. Gracias a su orientación profesional, logramos mejorar significativamente nuestra comunicación, fortalecer la confianza y aprender herramientas para resolver conflictos de una manera más sana y constructiva. También nos ayudó a comprender mejor nuestras necesidades individuales y cómo estas impactaban nuestra relación. Hoy nos sentimos más unidos, con una relación más sólida y una mejor capacidad para afrontar juntos los retos de la vida. Recomendamos plenamente su trabajo a todas las parejas que deseen fortalecer su vínculo y crecer juntos."
+                            </h3>
+                            <p class="text-white/80 uppercase tracking-widest text-xs font-bold">—  Juliana y Sergio, Colombia.</p>
+                        </div>
 
-                    <!-- Slide 5 -->
-                    <div class="w-full flex-shrink-0 px-10 md:px-20">
-                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
-                            "Llegué a terapia con Alejandra en uno de los momentos más difíciles de mi vida. Los ataques de ansiedad y de pánico habían afectado profundamente mi bienestar y mi tranquilidad. Desde el primer encuentro encontré un espacio seguro, empático y libre de juicios.
-                            Gracias a su acompañamiento profesional, aprendí herramientas prácticas para comprender y gestionar mis emociones, recuperar la calma y volver a confiar en mí misma. Su orientación no solo me ayudó a superar una etapa muy compleja, sino que transformó mi manera de enfrentar los desafíos de la vida. 
-                            Hoy puedo decir con total sinceridad que su terapia marcó un antes y un después en mi vida. Estaré siempre agradecida por su apoyo, dedicación y calidad humana."
-                        </h3>
-                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Anónimo.</p>
-                    </div>
+                        <!-- Slide 5 -->
+                        <div class="w-full flex-shrink-0 px-10 md:px-20">
+                            <!-- Letra reducida a text-lg md:text-xl -->
+                            <h3 class="font-serif text-lg md:text-xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                                "Llegué a terapia con Alejandra en uno de los momentos más difíciles de mi vida. Los ataques de ansiedad y de pánico habían afectado profundamente mi bienestar y mi tranquilidad. Desde el primer encuentro encontré un espacio seguro, empático y libre de juicios.
+                                Gracias a su acompañamiento profesional, aprendí herramientas prácticas para comprender y gestionar mis emociones, recuperar la calma y volver a confiar en mí misma. Su orientación no solo me ayudó a superar una etapa muy compleja, sino que transformó mi manera de enfrentar los desafíos de la vida. 
+                                Hoy puedo decir con total sinceridad que su terapia marcó un antes y un después en mi vida. Estaré siempre agradecida por su apoyo, dedicación y calidad humana."
+                            </h3>
+                            <p class="text-white/80 uppercase tracking-widest text-xs font-bold">— Anónimo.</p>
+                        </div>
 
-                    <!-- Slide 6 -->
-                    <div class="w-full flex-shrink-0 px-10 md:px-20">
-                        <h3 class="font-serif text-xl md:text-2xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
-                            "Después de romperse mi matrimonio de 6 años quede perdida, me refugie en el alcohol, empecé a consumir todo tipo de sustancias, destroce lo poco que me quedaba. En el proceso con Alejandra logre perder el miedo a mirar hacia adentro, poco a poco revisamos y resolvimos las heridas que me habían marcado tanto. Logre soltar y lo que más amo es que pude construir una vida que me gusta, disfruto de mis esencia pero sin excesos, disfruto de vincularme desde la elección y no desde la necesidad, disfruto los domingos sola, disfruto de una vida equilibrada, Gracias."
-                        </h3>
-                        <p class="text-white/80 uppercase tracking-widest text-sm font-bold">— Dani, Australia.</p>
+                        <!-- Slide 6 -->
+                        <div class="w-full flex-shrink-0 px-10 md:px-20">
+                            <!-- Letra reducida a text-lg md:text-xl -->
+                            <h3 class="font-serif text-lg md:text-xl text-white mb-6 italic leading-relaxed mx-auto tracking-wide">
+                                "Después de romperse mi matrimonio de 6 años quede perdida, me refugie en el alcohol, empecé a consumir todo tipo de sustancias, destroce lo poco que me quedaba. En el proceso con Alejandra logre perder el miedo a mirar hacia adentro, poco a poco revisamos y resolvimos las heridas que me habían marcado tanto. Logre soltar y lo que más amo es que pude construir una vida que me gusta, disfruto de mis esencia pero sin excesos, disfruto de vincularme desde la elección y no desde la necesidad, disfruto los domingos sola, disfruto de una vida equilibrada, Gracias."
+                            </h3>
+                            <p class="text-white/80 uppercase tracking-widest text-xs font-bold">— Dani, Australia.</p>
+                        </div>
                     </div>
                 </div>
 
