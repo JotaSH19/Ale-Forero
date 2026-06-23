@@ -368,11 +368,15 @@
 <!-- Testimonial Parallax (SLIDER AUTOMÁTICO) -->
     <!-- AQUÍ PUEDES PONER TU IMAGEN: Reemplaza la URL larga por 'img/tu-imagen.jpg' -->
     <!-- Para usar fondo completamente negro, comenta la línea de abajo y descomenta la siguiente -->
-    <section  class="absolute inset-0 bg-cover bg-center blur-md scale-110" style="background-image: url('img/35939.jpg');">
-    <!-- <section class="py-32 relative bg-brand-dark"> -->
+    <section class="py-32 relative overflow-hidden"> 
         
-        <!-- Capa de oscurecimiento y desenfoque (vidrio esmerilado) -->
-        <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md"></div> 
+        <!-- Imagen de fondo con Parallax (bg-fixed) y Blur aplicado directamente -->
+        <!-- Usamos scale-110 para evitar bordes blancos por el desenfoque -->
+        <div class="absolute inset-0 bg-fixed bg-cover bg-center blur-md scale-110" style="background-image: url('img/35939.jpg');"></div>
+        
+        <!-- Capa de oscurecimiento ajustada a /60 para que la imagen se note -->
+        <div class="absolute inset-0 bg-brand-dark/60"></div> 
+        
         <div class="container mx-auto px-6 relative z-10 text-center overflow-hidden">
             <!-- Título Fijo de Testimonios -->
             <div class="mb-12">
